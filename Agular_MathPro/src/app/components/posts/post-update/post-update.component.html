@@ -1,0 +1,21 @@
+
+<div class="container">
+  <h2>Edit</h2>
+  <form *ngIf="formUpdatePost" [formGroup]="formUpdatePost" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label>Content</label>
+      <input type="text" class="form-control" formControlName="content" >
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input type="text" class="form-control" formControlName="image">
+    </div>
+    <div class="form-group">
+      <label>Status_id</label>
+      <input type="text" class="form-control" formControlName="status_id">
+    </div>
+    <button  style="margin-left: 10px" class="btn btn-primary" routerLink="../../../newfeed">Back</button>
+    <button type="submit" class="btn btn-success" >Save</button>
+  </form>
+</div>
+

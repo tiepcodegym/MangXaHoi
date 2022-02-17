@@ -1,0 +1,107 @@
+
+<!--<div class="container">-->
+<!--  <div *ngIf="errLogin" class="alert alert-danger">-->
+<!--    {{errLogin}}-->
+<!--  </div>-->
+<!--</div>-->
+<!--<form *ngIf="formLogin" [formGroup]="formLogin" (ngSubmit)="submit()">-->
+<!--  <input type="email" formControlName="email" placeholder="Email">-->
+<!--  <input type="password" formControlName="password" placeholder="Password">-->
+<!--  <button type="submit">Login</button>-->
+<!--</form>-->
+
+
+<div class="www-layout">
+  <section>
+    <div class="gap no-gap signin whitish medium-opacity">
+      <div class="bg-image" style="background-image:url('../../assets/pitnik-MXH/images/resources/theme-bg.jpg')"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="big-ad">
+              <figure><img src="images/logo2.png" alt=""></figure>
+              <h1>Welcome to the Fakebook</h1>
+              <h2>Product by Math Pro team</h2>
+              <p>
+                Fakebook is a social network template that can be used to connect people. Now join & Make Cool Friends
+                around the world !!
+              </p>
+
+              <div class="fun-fact">
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="fun-box">
+                      <i class="ti-check-box"></i>
+                      <h6>Registered People</h6>
+                      <span>1,01,242</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="fun-box">
+                      <i class="ti-layout-media-overlay-alt-2"></i>
+                      <h6>Posts Published</h6>
+                      <span>21,03,245</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-4">
+                    <div class="fun-box">
+                      <i class="ti-user"></i>
+                      <h6>Online Users</h6>
+                      <span>40,145</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--              <div class="barcode">-->
+              <!--                <figure><img src="images/resources/Barcode.jpg" alt=""></figure>-->
+              <!--                <div class="app-download">-->
+              <!--                  <span>Download Mobile App and Scan QR Code to login</span>-->
+              <!--                  <ul class="colla-apps">-->
+              <!--                    <li><a title="" href="https://play.google.com/store?hl=en"><img src="images/android.png" alt="">android</a></li>-->
+              <!--                    <li><a title="" href="https://www.apple.com/lae/ios/app-store/"><img src="images/apple.png" alt="">iPhone</a></li>-->
+              <!--                    <li><a title="" href="https://www.microsoft.com/store/apps"><img src="images/windows.png" alt="">Windows</a></li>-->
+              <!--                  </ul>-->
+              <!--                </div>-->
+              <!--              </div>-->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="we-login-register">
+              <div class="form-title">
+                <i class="fa fa-key"></i>login
+                <div style="color: #721c24;background-color: #f8d7da;border-color: #f5c6cb;width: 237px;height: 40px;font-size: 13px;font-weight: lighter;" *ngIf="errLogin" class="alert alert-danger">
+                  {{ errLogin }}
+                </div>
+              </div>
+              <form class="we-form" *ngIf="formLogin" [formGroup]="formLogin" (ngSubmit)="submit()">
+                <input type="email" formControlName="email" placeholder="Email">
+                <div *ngIf="email?.invalid && email?.touched">
+                  <p style="color: white" *ngIf="email?.errors?.['required']">
+                    Không được để trống Email!
+                  </p>
+                </div>
+                <input type="password" formControlName="password" placeholder="Password">
+                <div *ngIf="password?.invalid && password?.touched">
+                  <p style="color: white" *ngIf="password?.errors?.['required']">
+                    Không được để trống Password!
+                  </p>
+                </div>
+                <button type="submit" data-ripple="">sign in</button>
+                <a class="forgot underline" href="#" title="">forgot password?</a>
+              </form>
+              <a class="with-smedia google" href="#" title="" data-ripple=""><i class="fa fa-google-plus"></i></a>
+              <a class="with-smedia facebook" href="#" title="" data-ripple=""><i class="fa fa-facebook"></i></a>
+              <a class="with-smedia twitter" href="#" title="" data-ripple=""><i class="fa fa-twitter"></i></a>
+              <a class="with-smedia instagram" href="#" title="" data-ripple=""><i class="fa fa-instagram"></i></a>
+              <span>don't have an account? <a class="we-account underline" routerLink="register"
+                                              title="">register now</a></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+

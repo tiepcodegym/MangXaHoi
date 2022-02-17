@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <tr>
+        <td>ID</td>
+        <td>Fullname</td>
+        <td>Image</td>
+        <td>Email</td>
+        <td>Address</td>
+        <td>Phone</td>
+        <td>Hobby</td>
+        <td>Birthday</td>
+        <td>Role</td>
+        <td colspan="3">Action</td>
+      </tr>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{user.fullname}}</td>
+        <td><img src="{{user.image}}" ></td>
+        <td>{{user.email}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.hobby}}</td>
+        <td>{{user.birthday}}</td>
+        <td>{{user.role}}</td>
+        <td><button class="btn btn-warning" routerLink="../users/{{user.id}}/update">Update</button></td>
+        <td><button class="btn btn-info" routerLink="../users/{{user.id}}/detail">Detail</button></td>
+        <td><button class="btn btn-danger" (click)="delete(user.id)">Delete</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+
